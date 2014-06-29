@@ -63,4 +63,17 @@ public class Images {
             "http://g.search1.alicdn.com/img/bao/uploaded/i4/i2/T1IH9iFrNdXXXXXXXX_!!0-item_pic.jpg", //Durio泰国榴莲夹心饼
             
     };
+    public final static String[] imagePrice = new String[] {
+    	"1元1小包，剩17包", //那巴提威化        
+		"5毛一支，若干",//Q版珍宝珠56支装
+        "22元1条，剩1条",//能得利糖
+        "12元1包，剩1包", //四洲紫菜 香港
+        "3元1盒，剩6盒", //利宾纳黑加仑子6*200ML
+        "6.4一盒，剩3盒", //狮王牙膏
+        "7元1包，剩1包", //『首选』烤焗花生100g
+        "10元100g，剩200g", //果仁世家什锦果仁
+        "6元1包，剩1包", //Durio泰国榴莲夹心饼
+
+    	
+    };
 }

@@ -192,7 +192,7 @@ public class ImageDetailActivity extends FragmentActivity implements OnClickList
 
         @Override
         public Fragment getItem(int position) {
-            return ImageDetailFragment.newInstance(Images.imageUrls[position]);
+            return ImageDetailFragment.newInstance(Images.imageUrls[position], Images.imagePrice[position]);
         }
     }
 

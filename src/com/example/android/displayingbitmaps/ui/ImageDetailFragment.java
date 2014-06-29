@@ -23,6 +23,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.android.displayingbitmaps.R;
 import com.example.android.displayingbitmaps.util.ImageFetcher;
@@ -34,8 +35,11 @@ import com.example.android.displayingbitmaps.util.Utils;
  */
 public class ImageDetailFragment extends Fragment {
     private static final String IMAGE_DATA_EXTRA = "extra_image_data";
+    private static final String IMAGE_PRICE_EXTRA = "extra_image_price";
     private String mImageUrl;
+    private String priceString;
     private ImageView mImageView;
+    private TextView priceTextView;
     private ImageFetcher mImageFetcher;
 
     /**
@@ -44,11 +48,13 @@ public class ImageDetailFragment extends Fragment {
      * @param imageUrl The image url to load
      * @return A new instance of ImageDetailFragment with imageNum extras
      */
-    public static ImageDetailFragment newInstance(String imageUrl) {
+    //add price
+    public static ImageDetailFragment newInstance(String imageUrl, String price) {
         final ImageDetailFragment f = new ImageDetailFragment();
 
         final Bundle args = new Bundle();
         args.putString(IMAGE_DATA_EXTRA, imageUrl);
+        args.putString(IMAGE_PRICE_EXTRA, price);
         f.setArguments(args);
 
         return f;
@@ -67,6 +73,7 @@ public class ImageDetailFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mImageUrl = getArguments() != null ? getArguments().getString(IMAGE_DATA_EXTRA) : null;
+        priceString = getArguments() != null ? getArguments().getString(IMAGE_PRICE_EXTRA) : null;
     }
 
     @Override
@@ -75,6 +82,7 @@ public class ImageDetailFragment extends Fragment {
         // Inflate and locate the main ImageView
         final View v = inflater.inflate(R.layout.image_detail_fragment, container, false);
         mImageView = (ImageView) v.findViewById(R.id.imageView);
+        priceTextView = (TextView) v.findViewById(R.id.price);
         return v;
     }
 
@@ -93,6 +101,7 @@ public class ImageDetailFragment extends Fragment {
         if (OnClickListener.class.isInstance(getActivity()) && Utils.hasHoneycomb()) {
             mImageView.setOnClickListener((OnClickListener) getActivity());
         }
+        priceTextView.setText(priceString);
     }
 
     @Override

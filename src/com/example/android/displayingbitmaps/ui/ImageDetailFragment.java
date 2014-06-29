@@ -32,6 +32,7 @@ import com.example.android.displayingbitmaps.util.Utils;
 /**
  * This fragment will populate the children of the ViewPager from {@link ImageDetailActivity}.
  */
+//I have to do some change
 public class ImageDetailFragment extends Fragment {
     private static final String IMAGE_DATA_EXTRA = "extra_image_data";
     private String mImageUrl;

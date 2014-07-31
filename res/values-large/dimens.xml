@@ -16,7 +16,7 @@
 -->
 
 <resources>
-
+	<dimen name="item_thumbnail_size">444dp</dimen>
     <dimen name="image_thumbnail_size">148dp</dimen>
     <dimen name="image_thumbnail_spacing">2dp</dimen>
 

@@ -24,7 +24,7 @@ import com.example.android.displayingbitmaps.BuildConfig;
 import com.example.android.displayingbitmaps.util.Utils;
 
 /**
- * Simple FragmentActivity to hold the main {@link ImageGridFragment} and not much else.
+ * Simple FragmentActivity to hold the main {@link ItemGridFragment} and not much else.
  */
 public class ImageGridActivity extends FragmentActivity {
     private static final String TAG = "ImageGridActivity";
